@@ -1,0 +1,2 @@
+this is a temporary text file, which should be used
+to validate the program that$parses this file using bag-of-words.

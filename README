@@ -1,0 +1,40 @@
+1. Introduction
+2. Compiling
+3. Usage
+
+
+1. Introduction
+bow_parser is a bag of words parser that is used to parse a file and print out its word frequencies for every word in that file.
+Given an arbitrary text document written in English, this program will output a list of all word occurrences, labeled with word frequencies. In addition, it will also ouput a list of sentence numbers for every word printed.
+
+Currently, only ASCII text files are supported (i.e. no UTF-8 files). Also, a word is defined as a sequence of alphanumeric letters or digits which can also include hyphens or hashes, but nothing else. 
+
+The output will be written to std output, and is of the following format:
+	a	{1:1}
+	bag-of-words	{1:2}
+	be	{1:1}
+	file	{2:1,2}
+	is	{1:1}
+	parses	{1:2}
+	program	{1:2}
+	should	{1:1}
+	temporary	{1:1}
+	text	{1:1}
+	that	{1:2}
+	the	{1:2}
+	this	{2:1,2}
+	to	{1:2}
+	used	{1:1}
+	using	{1:2}
+	validate	{1:2}
+	which	{1:1}
+
+2. Compiling
+On *nix systems, g++ should be used to compile the program. CD into the directory 'bow_parser' (the directory that contains this README file) and type:
+$ make
+After this, the compiled binary will be outputted to the 'bin/' directory.
+
+3. Usage
+The file should be run on commandline, with filename as the first argument. A sample file is provided in the 'sample' directory.
+$ bin/bow_parser sample/inputfile.txt
+
